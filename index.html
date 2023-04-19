@@ -24,24 +24,18 @@
   <link rel="shortcut icon" href="favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="favicon/browserconfig.xml">
-  <!-- <meta name="theme-color" content="#ffffff"> -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+    integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
     integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="assets/lib/gsap.min.js" defer></script>
-  <script src="assets/lib/ScrollTrigger.min.js" defer></script>
-  <script src="assets/lib/ScrollSmoother.min.js" defer></script>
   <script src="assets/lib/hystmodal.min.js"></script>
   <script src="/assets/js/app.js" defer></script>
-
-
-  <!-- new -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js">
-  </script> -->
+  <script src="/assets/js/somejqury.js" defer></script>
   <title>Best floor</title>
 </head>
 
@@ -101,6 +95,7 @@
             <a href="#price">Цены</a>
           </div>
           <div class="nav__item nav__call">
+            <a class="nav__call-link" href="tel:+9999999999">+7 (999) 999-99-99</a>
             <a href="tel:+">
               <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="call-icon" d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 
@@ -134,8 +129,10 @@
         </nav>
         <div class="slogan">
           <div class="slogan__item text-slogan">
-            <h1>Укладка полов в Красноярске</h1>
-            <small>от 250р/м2.</small>
+            <div class="slogan__grop-text">
+              <h1>Укладка полов в Красноярске</h1>
+              <small>от 250р/м2.</small>
+            </div>
             <div class="option">
               <button openModal="#pop-up" class="default__button">Расчёт стоимости</button>
               <button openModal="#pop-up" class="default__button">Подобрать тип покрытия</button>
@@ -255,6 +252,30 @@
         </div>
         <button openModal="#pop-up" class="default__button gallery__button">Оставить заявку</button>
       </section>
+      <section class="swiper-rew" id="review">
+        <h1 class="default__heading">Наши работы</h1>
+        <!-- <div class="swiper-slide">
+          <a href="https://www.youtube.com/embed/HM5Sb0yBEU0" class="reviews__block-slide-data" data-fancybox=""
+            style="background-image: url('https://img.youtube.com/vi/HM5Sb0yBEU0/sddefault.jpg');" tabindex="0">
+            some video?
+          </a>
+        </div> -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/workSlider/1.jpg" alt="наша работа">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/workSlider/2.jpg" alt="наша работа">
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <button openModal="#pop-up" class="default__button gallery__button">Оставить заявку</button>
+      </section>
       <section class="howItWorks">
         <h1 class="default__heading">Как это работает</h1>
         <div class="howItWorks__wrapper card">
@@ -274,8 +295,33 @@
         </div>
       </section>
       <section class="price">
+        <h1 class="default__heading">Цены</h1>
         <h1>Средняя стоимость укладки и ремонта полов в квартирах в в Красноярске </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iure est incidunt voluptatem laborum
+          maiores, aliquid fuga quam quasi ex odit voluptatibus optio omnis at fugit repellat provident facere minima.
+        </p>
+        <div class="price__wrapper">
+          <img class="price__img" src="/assets/img/slogan.jpg" alt="">
+          <img class="price__img" src="/assets/img/slogan.jpg" alt="">
+          <div style="position:relative;overflow:hidden;"><a
+              href="https://yandex.ru/maps/62/krasnoyarsk/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">Красноярск</a><a
+              href="https://yandex.ru/maps/62/krasnoyarsk/house/ulitsa_aleksandra_matrosova_4/bUsYfg9mSEYEQFtvfXV4cX9lZw==/services/?ll=92.885038%2C55.990995&tab=services&utm_medium=mapframe&utm_source=maps&z=17"
+              style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Александра Матросова, 4 —
+              Яндекс Карты</a><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=92.885038%2C55.990995&mode=whatshere&tab=services&whatshere%5Bpoint%5D=92.885038%2C55.990995&whatshere%5Bzoom%5D=17&z=17"
+              width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>
       </section>
+      <footer>
+        <div class="footer__item">
+          <h1 class="default__heading">Мы в соц сетях</h1>
+          <a href="https://www.facebook.com/" class="footer__link">Facebook</a>
+          <a href="https://www.facebook.com/" class="footer__link">VK</a>
+          <a href="https://www.facebook.com/" class="footer__link">Inst</a>
+          <a href="https://www.facebook.com/" class="footer__link">Telega</a>
+        </div>
+      </footer>
     </div>
   </div>
   <!-- modals -->

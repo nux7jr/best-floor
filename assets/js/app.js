@@ -15,13 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      // when window width is >= 320px
-
-      // when window width is >= 640px
       640: {
         slidesPerView: 2,
       },
-      // when window width is >= 768px
       768: {
         slidesPerView: 3,
       },
@@ -55,12 +51,4 @@ document.addEventListener("DOMContentLoaded", function () {
       colorScheme === "default" ? "dark" : "default"
     );
   });
-  // gsap
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  if (ScrollTrigger.isTouch !== 1) {
-    ScrollSmoother.create({
-      smooth: 1.5,
-      effects: true,
-    });
-  }
 });
